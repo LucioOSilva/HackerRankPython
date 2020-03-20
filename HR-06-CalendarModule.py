@@ -1,6 +1,5 @@
 from calendar import weekday
 
-
 date = list(map(int, input().split()))
 
 daynum = weekday(date[2], date[0], date[1])
