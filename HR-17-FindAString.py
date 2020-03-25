@@ -38,3 +38,21 @@ Here, the range loops over "0" to "4". "5" is excluded.
 """
 
 
+def count_substring(string, sub_string):
+    totaltimes = 0
+    index = string.find(sub_string)
+    while index < len(string):
+        if sub_string in string[index:len(sub_string) + index]:
+            totaltimes += 1
+            index += 1
+        else:
+            index += 1
+    return totaltimes
+
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+
+    count = count_substring(string, sub_string)
+    print(count)
